@@ -1,17 +1,25 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int n,a[50],m, i;
-    printf("enter no of ele:");
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
+    int a, b, m=0, n=0, i,j;
+    printf("enter two numbers :");
+    scanf("%d %d",&a,&b);
+    for(i=1;i<a;i++)
     {
-        scanf("%d",&a[i]);
-        }
-    for(i=0;i<n;i++)
+        if(a%i==0)
+            m+=i;
+            }
+    for(j=1;j<b;j++)
     {
-        m=a[i]*a[i];
-        printf("%d ",m);
-        } 
+        if(b%j==0)
+            n+=j;
+            }
+    if((a==n)&&(b==m))
+    {
+        printf("%d %d are amicable ",a, b);
         }
+     else
+        {
+            printf("not amicable ");
+            }
+            }
